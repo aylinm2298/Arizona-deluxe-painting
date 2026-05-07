@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank You | Arizona Deluxe Painting LLC</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="hero">
+<div class="hero-copy">
+<p class="eyebrow">Thank you!</p>
+<h1>Your quote request was sent.</h1>
+<p id="estimateText">We’ll reach out soon to schedule your estimate.</p>
+<a class="call-link" href="tel:14804387134">Call (480) 438-7134</a>
+</div>
+</main>
+
+<script>
+const savedEstimate = localStorage.getItem('paintingEstimate');
+if (savedEstimate) {
+document.querySelector('#estimateText').textContent = savedEstimate + '. We’ll reach out soon to confirm final pricing.';
+localStorage.removeItem('paintingEstimate');
+}
+</script>
+</body>
+</html>

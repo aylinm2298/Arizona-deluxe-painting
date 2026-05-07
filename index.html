@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arizona Deluxe Painting LLC | Free Quote</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+       <img src="images/logo.png" alt="Arizona Deluxe Painting Logo" class="logo">
+      <div>
+        <strong>Arizona Deluxe Painting LLC</strong>
+        <span>Interior • Exterior • Minor Repairs</span>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html">Get a Quote</a>
+      <a href="contact.html">Message Us</a>
+      <a href="https://www.instagram.com/arizonadeluxepainting_llc?igsh=dXY5aHI2dTQyNW9m" target="_blank"
+      class="instagram-btn"> Follow Us on Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Arizona homes deserve deluxe care</p>
+        <h1>Get a fast painting estimate for your home.</h1>
+        <p>Tell us about the property, upload photos, and receive an instant starting estimate based on information provided.</p>
+        <a class="call-link" href="tel:14804387134">Call (480) 438-7134</a>
+      </div>
+      <div class="hero-card">
+        <h2>Instant Quote Form</h2>
+        <p>Fill this out to get a starting estimate. Final pricing may change after an in-person review.</p>
+      </div>
+    </section>
+
+    <section class="quote-section" id="quote">
+      <form id="quoteForm" class="quote-form" name="quote" method="POST" action="/thank-you.html" data-netlify="true" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="quote" />
+        <fieldset>
+          <legend>Customer Information</legend>
+            <label>Full Name<input type="text" id="name" name="name" required placeholder="Jane Doe" /></label>
+            <label>Phone Number<input type="tel" id="phone" name="phone" required placeholder="(480) 000-0000" /></label>
+            <label>Email Address<input type="email" id="email" name="email" required placeholder="name@email.com" /></label>
+            <label>Home Address<input type="text" id="address" name="address" required placeholder="Street, City, AZ" /></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Project Details</legend>
+          <div class="grid-2">
+            <label>Approx. Home Square Footage<input type="number" id="sqft" name="sqft" min="1" required placeholder="Example: 1800" /></label>
+            <label>Project Type
+              <select id="projectType" name="projectType">
+                <option>Exterior Painting</option>
+                <option>Interior Painting</option>
+                <option>Interior + Exterior Painting</option>
+                <option>Minor Home Repairs</option>
+              </select>
+            </label>
+            <label>Number of Stories
+              <select id="stories" name="stories">
+                <option>1 story</option>
+                <option>2 stories</option>
+                <option>3+ stories</option>
+              </select>
+            </label>
+            <label>Timeline
+              <select id="timeline" name="timeline">
+                <option>As soon as possible</option>
+                <option>Within 2 weeks</option>
+                <option>Within 1 month</option>
+                <option>Just browsing</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Repairs or Damage to Include<textarea id="repairs" name="repairs" rows="4" placeholder="Peeling paint, stucco cracks, drywall patching, fascia repair, etc."></textarea></label>
+          <label>Upload Photos of the Home or Damage<input type="file" id="images" name="images" multiple accept="image/*" /></label>
+          <div id="preview" class="preview"></div>
+        </fieldset>
+
+        <button type="submit" class="primary-btn">Request My Estimate</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="estimateModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+      <div class="confetti">🎉</div>
+      <h2>Your starting estimate is ready!</h2>
+      <p id="estimateText" class="estimate-text"></p>
+      <p class="small-note">This is a starting estimate based on $1.75 × square footage. Photos and repairs help confirm final pricing.</p>
+      <a class="primary-btn" href="tel:14804387134">Call (480) 438-7134 to Lock In the Offer</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
