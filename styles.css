@@ -76,6 +76,21 @@ h1 { font-size: clamp(2.3rem, 5vw, 5.2rem); line-height: .95; margin: 12px 0 18p
   box-shadow: var(--shadow);
 }
 
+.hero-card h2,
+.hero-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    radial-gradient(circle at 25% 35%, #ffd65a 0%, transparent 22%),
+    linear-gradient(135deg, #ff9a1f 0%, #c95712 38%, #7a2f0c 70%, #1b120b 100%);
+}
+
 .call-link, .primary-btn {
   display: inline-flex;
   align-items: center;
